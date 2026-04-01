@@ -5,7 +5,7 @@ import dropdown_icon from '../Components/Assets/dropdown_icon.png';
 import Items from '../Components/Items/Items';
 
 const ShopCategory = (props) => {
-   const {all_Product}=useContext(ShopContext);
+   const {all_product}=useContext(ShopContext);
   return (
     <div className='shop-category'>
      <img className="shopcategory-banner" src={props.banner} alt="" />
@@ -19,7 +19,7 @@ const ShopCategory = (props) => {
       </div>
      </div>
      <div className="shopcategory-products">
-      {all_Product.map((item,i)=>{
+      {all_product.map((item,i)=>{
          if(props.category.toLowerCase() ===item.category.toLowerCase() ){
           return <Items key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price}/>
 
